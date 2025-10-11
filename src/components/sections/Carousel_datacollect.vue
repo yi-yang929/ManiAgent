@@ -10,7 +10,7 @@
     </el-row>
 
     <!-- 两个视频并排 -->
-    <el-row justify="center" :gutter="20">
+    <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10" >
       <!-- 第一个视频 -->
       <el-col :xs="24" :sm="12">
         <el-container class="video-container">

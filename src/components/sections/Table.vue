@@ -176,7 +176,8 @@ const cellStyle = ({row, column, rowIndex, columnIndex}) => {
         
         <!-- 数据表格 -->
         <el-row justify="center">
-            <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="12">
+            <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10">
+                
 
                 <!-- 卡片 -->
                 <el-card class="card">
