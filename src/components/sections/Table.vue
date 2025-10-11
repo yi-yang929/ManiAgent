@@ -177,56 +177,58 @@ const cellStyle = ({row, column, rowIndex, columnIndex}) => {
         <!-- 数据表格 -->
         <el-row justify="center">
             <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10">
-                
-
                 <!-- 卡片 -->
                 <el-card class="card">
-
                     <!-- 默认tab -->
                     <el-tabs class="demo-tabs" model-value="Simulation">
+                        <!-- 第一个tab -->
+                        <el-tab-pane label="Simulation" name="Simulation">
+                            <!-- 表格数据 -->
+                            <el-table 
+                                :data="tableData"
+                                :default-sort="{ prop: 'Average', order: 'descending' }"
+                                scrollbar-always-on
+                                :header-cell-style="{ backgroundColor: '#f5f7fa' }"
+                                :row-style="{ height: '50px' }"
+                                :cell-style="{ padding: '5px' }"
+                                style="width: 100%; table-layout: fixed;"
+                            >
+                                <el-table-column prop="Method" label="Method" width="180" sortable/>
+                                <el-table-column prop="Task_1" label="Task 1" min-width="100" sortable/>
+                                <el-table-column prop="Task_2" label="Task 2" min-width="100" sortable/>
+                                <el-table-column prop="Task_3" label="Task 3" min-width="100" sortable/>
+                                <el-table-column prop="Task_4" label="Task 4" min-width="100" sortable/>
+                                <el-table-column prop="Average" label="Average" min-width="100" sortable/>
+                            </el-table>
+                        </el-tab-pane>
 
-                    <!-- 第一个tab -->
-                    <el-tab-pane label="Simulation" name="Simulation">
-                        <!-- 表格数据 -->
-                        <el-table 
-                            :data="tableData"
-                            :default-sort="{ prop: 'Average', order: 'descending' }"
-                            scrollbar-always-on
-                        >
-                            <el-table-column prop="Method" label="Method" width="180" sortable/>
-                            <el-table-column prop="Task_1" label="Task 1" min-width="100" sortable/>
-                            <el-table-column prop="Task_2" label="Task 2" min-width="100" sortable/>
-                            <el-table-column prop="Task_3" label="Task 3" min-width="100" sortable/>
-                            <el-table-column prop="Task_4" label="Task 4" min-width="100" sortable/>
-                            <el-table-column prop="Average" label="Average" min-width="100" sortable/>
-                        </el-table>
-                    </el-tab-pane>
-
-                    <!-- 第二个tab -->
-                    <el-tab-pane label="Physical Experiments" name="Physical">
-                        <!-- 表格数据 -->
-                        <el-table 
-                            :data="tableData2"
-                            :default-sort="{ prop: 'Average', order: 'descending' }"
-                            :cell-style="cellStyle"
-                            scrollbar-always-on
-                        >
-                            <el-table-column prop="Type" label="Method" width="150"/>
-                            <el-table-column prop="Method" label="" width="150"/>
-                            <el-table-column prop="Task_1" label="Task 1" min-width="80" sortable/>
-                            <el-table-column prop="Task_2" label="Task 2" min-width="80" sortable/>
-                            <el-table-column prop="Task_3" label="Task 3" min-width="80" sortable/>
-                            <el-table-column prop="Task_4" label="Task 4" min-width="80" sortable/>
-                            <el-table-column prop="Task_5" label="Task 5" min-width="80" sortable/>
-                            <el-table-column prop="Task_6" label="Task 6" min-width="80" sortable/>
-                            <el-table-column prop="Task_7" label="Task 7" min-width="80" sortable/>
-                            <el-table-column prop="Task_8" label="Task 8" min-width="80" sortable/>
-                            <el-table-column prop="Average" label="Average" min-width="100" sortable/>
-                        </el-table>
-                    </el-tab-pane>
-
+                        <!-- 第二个tab -->
+                        <el-tab-pane label="Physical Experiments" name="Physical">
+                            <!-- 表格数据 -->
+                            <el-table 
+                                :data="tableData2"
+                                :default-sort="{ prop: 'Average', order: 'descending' }"
+                                :cell-style="cellStyle"
+                                scrollbar-always-on
+                                :header-cell-style="{ backgroundColor: '#f5f7fa' }"
+                                :row-style="{ height: '50px' }"
+                                :cell-style="{ padding: '5px' }"
+                                style="width: 100%; table-layout: fixed;"
+                            >
+                                <el-table-column prop="Type" label="Method" width="150"/>
+                                <el-table-column prop="Method" label="" width="150"/>
+                                <el-table-column prop="Task_1" label="Task 1" min-width="80" sortable/>
+                                <el-table-column prop="Task_2" label="Task 2" min-width="80" sortable/>
+                                <el-table-column prop="Task_3" label="Task 3" min-width="80" sortable/>
+                                <el-table-column prop="Task_4" label="Task 4" min-width="80" sortable/>
+                                <el-table-column prop="Task_5" label="Task 5" min-width="80" sortable/>
+                                <el-table-column prop="Task_6" label="Task 6" min-width="80" sortable/>
+                                <el-table-column prop="Task_7" label="Task 7" min-width="80" sortable/>
+                                <el-table-column prop="Task_8" label="Task 8" min-width="80" sortable/>
+                                <el-table-column prop="Average" label="Average" min-width="100" sortable/>
+                            </el-table>
+                        </el-tab-pane>
                     </el-tabs>
-
                 </el-card>
             </el-col>
         </el-row>
@@ -236,5 +238,28 @@ const cellStyle = ({row, column, rowIndex, columnIndex}) => {
 <style scoped>
 .card {
     margin-top: 20px;
+}
+
+/* 确保表格容器样式正确 */
+.el-table {
+  width: 100%;
+}
+
+/* 修复表头和表体不对齐的问题 */
+.el-table__header-wrapper,
+.el-table__body-wrapper {
+  overflow-x: auto !important;
+}
+
+/* 确保表头和表体宽度一致 */
+.el-table__header,
+.el-table__body {
+  width: 100% !important;
+  table-layout: fixed;
+}
+
+/* 修复滚动条导致的宽度差异 */
+.el-table__body-wrapper {
+  overflow-y: auto !important;
 }
 </style>
