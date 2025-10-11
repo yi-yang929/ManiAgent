@@ -53,7 +53,7 @@ export default {
   <Carousel_simulation/>
   <Carousel/>
   <Carousel_datacollect/>
-  <Latex/>
+  <!-- <Latex/> -->
   <Table/>
   <Collapse/>
   <Echart/>
