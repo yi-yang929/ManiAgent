@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 
-// 表格数据
+// 第一个表格数据
 const tableData = [
 {
     Method: 'CogACT',
@@ -59,6 +59,132 @@ const tableData = [
     Average: '83.0%',
 }
 ]
+
+// 第二个表格数据
+const tableData2 = [
+{
+    Type: 'Commercial VLM',
+    Method: 'GPT-4o',
+    Task_1: '5/6',
+    Task_2: '5/6',
+    Task_3: '3/6',
+    Task_4: '4/6',
+    Task_5: '4/6',
+    Task_6: '3/6',
+    Task_7: '4/6',
+    Task_8: '2/6',
+    Average: '62.5%',
+},
+{
+    Type: 'Commercial VLM',
+    Method: 'GPT-5-nano',
+    Task_1: '5/6',
+    Task_2: '6/6',
+    Task_3: '4/6',
+    Task_4: '6/6',
+    Task_5: '4/6',
+    Task_6: '4/6',
+    Task_7: '4/6',
+    Task_8: '3/6',
+    Average: '75.0%',
+},
+{
+    Type: 'Commercial VLM',
+    Method: 'GPT-5',
+    Task_1: '6/6',
+    Task_2: '6/6',
+    Task_3: '6/6',
+    Task_4: '6/6',
+    Task_5: '6/6',
+    Task_6: '5/6',
+    Task_7: '4/6',
+    Task_8: '6/6',
+    Average: '93.8%',
+},
+{
+    Type: 'Commercial VLM',
+    Method: 'Claude-4-sonnet',
+    Task_1: '6/6',
+    Task_2: '6/6',
+    Task_3: '6/6',
+    Task_4: '5/6',
+    Task_5: '6/6',
+    Task_6: '6/6',
+    Task_7: '6/6',
+    Task_8: '5/6',
+    Average: '95.8%',
+},
+{
+    Type: 'Commercial VLM',
+    Method: 'Grok-4',
+    Task_1: '6/6',
+    Task_2: '6/6',
+    Task_3: '4/6',
+    Task_4: '6/6',
+    Task_5: '6/6',
+    Task_6: '6/6',
+    Task_7: '6/6',
+    Task_8: '6/6',
+    Average: '95.8%',
+},
+{
+    Type: 'Opensource VLM',
+    Method: 'GPT-oss-120b',
+    Task_1: '4/6',
+    Task_2: '6/6',
+    Task_3: '2/6',
+    Task_4: '4/6',
+    Task_5: '4/6',
+    Task_6: '2/6',
+    Task_7: '2/6',
+    Task_8: '1/6',
+    Average: '52.1%',
+},
+{
+    Type: 'Opensource VLM',
+    Method: 'Qwen-3-235b',
+    Task_1: '6/6',
+    Task_2: '5/6',
+    Task_3: '1/6',
+    Task_4: '6/6',
+    Task_5: '3/6',
+    Task_6: '2/6',
+    Task_7: '1/6',
+    Task_8: '2/6',
+    Average: '54.2%',
+}
+]
+
+// 单元格样式方法
+const cellStyle = ({row, column, rowIndex, columnIndex}) => {
+    if (rowIndex % 2 === 0) {
+        return {
+            backgroundColor: '#EFEFEF'
+        }
+    }
+}
+
+// 合并单元格方法
+const arraySpanMethod = ({ row, column, rowIndex, columnIndex }) => {
+    if (columnIndex === 0) {
+        if (rowIndex === 0) {
+            return {
+                rowspan: 5,
+                colspan: 1
+            }
+        } else if (rowIndex === 5) {
+            return {
+                rowspan: 2,
+                colspan: 1
+            }
+        } else {
+            return {
+                rowspan: 0,
+                colspan: 0
+            }
+        }
+    }
+}
 </script>
 
 <template>
@@ -80,8 +206,7 @@ const tableData = [
                     <el-tabs class="demo-tabs" model-value="Simulation">
 
                     <!-- 第一个tab -->
-                    <el-tab-pane label="Simulation" name="Simulation on SimplerEnv">
-
+                    <el-tab-pane label="Simulation" name="Simulation">
                         <!-- 表格数据 -->
                         <el-table 
                             :data="tableData"
@@ -97,23 +222,35 @@ const tableData = [
                         </el-table>
                     </el-tab-pane>
 
-                    <el-tab-pane label="Method B" name="Method B">
-                        Method B
+                    <!-- 第二个tab -->
+                    <el-tab-pane label="Physical Experiments" name="Physical">
+                        <!-- 表格数据 -->
+                        <el-table 
+                            :data="tableData2"
+                            :default-sort="{ prop: 'Average', order: 'descending' }"
+                            :cell-style="cellStyle"
+                            :span-method="arraySpanMethod"
+                            scrollbar-always-on
+                        >
+                            <el-table-column prop="Type" label="Method" width="150"/>
+                            <el-table-column prop="Method" label="" width="150"/>
+                            <el-table-column prop="Task_1" label="Task 1" min-width="80"/>
+                            <el-table-column prop="Task_2" label="Task 2" min-width="80"/>
+                            <el-table-column prop="Task_3" label="Task 3" min-width="80"/>
+                            <el-table-column prop="Task_4" label="Task 4" min-width="80"/>
+                            <el-table-column prop="Task_5" label="Task 5" min-width="80"/>
+                            <el-table-column prop="Task_6" label="Task 6" min-width="80"/>
+                            <el-table-column prop="Task_7" label="Task 7" min-width="80"/>
+                            <el-table-column prop="Task_8" label="Task 8" min-width="80"/>
+                            <el-table-column prop="Average" label="Average" min-width="100" sortable/>
+                        </el-table>
                     </el-tab-pane>
 
-                    <!-- <el-tab-pane label="Method C" name="Method C">
-                        Method C
-                    </el-tab-pane>
-
-                    <el-tab-pane label="Method D" name="Method D">
-                        Method D
-                    </el-tab-pane> -->
                     </el-tabs>
 
                 </el-card>
             </el-col>
         </el-row>
-
     </div>
 </template>
 
@@ -122,4 +259,3 @@ const tableData = [
     margin-top: 20px;
 }
 </style>
-  
