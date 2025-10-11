@@ -27,25 +27,25 @@ const authors = [
     name: "Yi Yang",
     icon: "",
     homepage: "",
-    address_flag: "1,#"
+    address_flag: "1,#,†"
   },
   {
     name: "Yuqing Wen",
     icon: "",
     homepage: "",
-    address_flag: "2,#"
+    address_flag: "2,#,†"
   },
   {
     name: "Kefan Gu",
     icon: "",
     homepage: "",
-    address_flag: "3,#"
+    address_flag: "3,#,†"
   },
   {
     name: "Hebei Li",
     icon: "",
     homepage: "",
-    address_flag: "2"
+    address_flag: "2,†"
   },
   {
     name: "Yucheng Zhao",
@@ -97,7 +97,7 @@ const addresses = [
 
 // 共一和通讯提示
 const con_and_corresponding_author = 
-  "#: Equal Contribution. *: Corresponding Author."
+  "#: Equal Contribution. *: Corresponding Author. †: This work was completed during the internship at Dexmal"
 
 // 最新消息
 const news = ""
