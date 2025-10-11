@@ -28,11 +28,14 @@ export default {
       //   "./carousel/6.jpg",
       // ],
       video_paths: [
-        "./video/video.mp4",
-        "./video/video.mp4",
-        "./video/video.mp4",
-        "./video/video.mp4",
-        "./video/video.mp4",
+        "./video/physical_task_1.mp4",
+        "./video/physical_task_2.mp4",
+        "./video/physical_task_3.mp4",
+        "./video/physical_task_4.mp4",
+        "./video/physical_task_5.mp4",
+        "./video/physical_task_6.mp4",
+        "./video/physical_task_7.mp4",
+        "./video/physical_task_8.mp4",
       ]
     }
   }
