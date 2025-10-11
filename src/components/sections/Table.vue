@@ -212,14 +212,14 @@ const cellStyle = ({row, column, rowIndex, columnIndex}) => {
                         >
                             <el-table-column prop="Type" label="Method" width="150"/>
                             <el-table-column prop="Method" label="" width="150"/>
-                            <el-table-column prop="Task_1" label="Task 1" min-width="80"/>
-                            <el-table-column prop="Task_2" label="Task 2" min-width="80"/>
-                            <el-table-column prop="Task_3" label="Task 3" min-width="80"/>
-                            <el-table-column prop="Task_4" label="Task 4" min-width="80"/>
-                            <el-table-column prop="Task_5" label="Task 5" min-width="80"/>
-                            <el-table-column prop="Task_6" label="Task 6" min-width="80"/>
-                            <el-table-column prop="Task_7" label="Task 7" min-width="80"/>
-                            <el-table-column prop="Task_8" label="Task 8" min-width="80"/>
+                            <el-table-column prop="Task_1" label="Task 1" min-width="80" sortable/>
+                            <el-table-column prop="Task_2" label="Task 2" min-width="80" sortable/>
+                            <el-table-column prop="Task_3" label="Task 3" min-width="80" sortable/>
+                            <el-table-column prop="Task_4" label="Task 4" min-width="80" sortable/>
+                            <el-table-column prop="Task_5" label="Task 5" min-width="80" sortable/>
+                            <el-table-column prop="Task_6" label="Task 6" min-width="80" sortable/>
+                            <el-table-column prop="Task_7" label="Task 7" min-width="80" sortable/>
+                            <el-table-column prop="Task_8" label="Task 8" min-width="80" sortable/>
                             <el-table-column prop="Average" label="Average" min-width="100" sortable/>
                         </el-table>
                     </el-tab-pane>
