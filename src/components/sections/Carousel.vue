@@ -110,5 +110,14 @@ video {
   width: 100%;
 }
 
+/* 添加标题和轮播图之间的间距 */
+.section-title {
+  margin-bottom: 2rem;  /* 增加标题下方间距 */
+}
+
+.carousel-container {
+  margin-top: 1rem;  /* 轮播图容器上方间距 */
+}
+
 </style>
   
