@@ -3,29 +3,61 @@
 // 表格数据
 const tableData = [
 {
-    model: 'Model A',
-    params: '10 B',
-    value_a: '123',
-    value_b: '321',
+    Method: 'CogACT',
+    Task_1: '15.0%',
+    Task_2: '50.8%',
+    Task_3: '71.7%',
+    Task_4: '67.5%',
+    Average: '51.3%',
 },
 {
-    model: 'Model B',
-    params: '30 B',
-    value_a: '456',
-    value_b: '654',
+    Method: 'pi-0',
+    Task_1: '21.3%',
+    Task_2: '58.8%',
+    Task_3: '63.3%',
+    Task_4: '79.2%',
+    Average: '55.7%',
 },
 {
-    model: 'Model C',
-    params: '20 B',
-    value_a: '789',
-    value_b: '987',
+    Method: 'ManiAgent-GPT-4o',
+    Task_1: '76.4%',
+    Task_2: '95.8%',
+    Task_3: '77.8%',
+    Task_4: '47.2%',
+    Average: '74.3%',
 },
 {
-    model: 'Model D',
-    params: '5 B',
-    value_a: '100',
-    value_b: '200',
+    Method: 'ManiAgent-GPT-5-nano',
+    Task_1: '72.2%',
+    Task_2: '63.9%',
+    Task_3: '62.5%',
+    Task_4: '50.0%',
+    Average: '62.2%',
 },
+{
+    Method: 'ManiAgent-GPT-5',
+    Task_1: '87.5%',
+    Task_2: '95.8%',
+    Task_3: '91.7%',
+    Task_4: '72.2%',
+    Average: '86.8%',
+},
+{
+    Method: 'ManiAgent-Claude-4-sonnet',
+    Task_1: '77.8%',
+    Task_2: '98.6%',
+    Task_3: '80.6%',
+    Task_4: '62.5%',
+    Average: '79.9%',
+},
+{
+    Method: 'ManiAgent-Grok-4',
+    Task_1: '88.9%',
+    Task_2: '98.6%',
+    Task_3: '83.3%',
+    Task_4: '61.1%',
+    Average: '83.0%',
+}
 ]
 </script>
 
@@ -45,21 +77,23 @@ const tableData = [
                 <el-card class="card">
 
                     <!-- 默认tab -->
-                    <el-tabs class="demo-tabs" model-value="Method A">
+                    <el-tabs class="demo-tabs" model-value="Simulation">
 
                     <!-- 第一个tab -->
-                    <el-tab-pane label="Method A" name="Method A">
+                    <el-tab-pane label="Simulation" name="Simulation">
 
                         <!-- 表格数据 -->
                         <el-table 
                             :data="tableData"
-                            :default-sort="{ prop: 'value_b', order: 'descending' }"
+                            :default-sort="{ prop: 'Average', order: 'descending' }"
                             scrollbar-always-on
                         >
-                            <el-table-column prop="model" label="Model" width="100" sortable/>
-                            <el-table-column prop="params" label="#Params" min-width="120" sortable/>
-                            <el-table-column prop="value_a" label="Value A" min-width="120" sortable/>
-                            <el-table-column prop="value_b" label="Value B" min-width="120" sortable/>
+                            <el-table-column prop="Method" label="Method" width="180" sortable/>
+                            <el-table-column prop="Task_1" label="Task 1" min-width="100" sortable/>
+                            <el-table-column prop="Task_2" label="Task 2" min-width="100" sortable/>
+                            <el-table-column prop="Task_3" label="Task 3" min-width="100" sortable/>
+                            <el-table-column prop="Task_4" label="Task 4" min-width="100" sortable/>
+                            <el-table-column prop="Average" label="Average" min-width="100" sortable/>
                         </el-table>
                     </el-tab-pane>
 
@@ -67,13 +101,13 @@ const tableData = [
                         Method B
                     </el-tab-pane>
 
-                    <el-tab-pane label="Method C" name="Method C">
+                    <!-- <el-tab-pane label="Method C" name="Method C">
                         Method C
                     </el-tab-pane>
 
                     <el-tab-pane label="Method D" name="Method D">
                         Method D
-                    </el-tab-pane>
+                    </el-tab-pane> -->
                     </el-tabs>
 
                 </el-card>
