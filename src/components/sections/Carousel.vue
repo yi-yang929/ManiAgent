@@ -28,11 +28,11 @@ export default {
       //   "./carousel/6.jpg",
       // ],
       video_paths: [
-        "../video/video.mp4",
-        "../video/video.mp4",
-        "../video/video.mp4",
-        "../video/video.mp4",
-        "../video/video.mp4",
+        "./video/video.mp4",
+        "./video/video.mp4",
+        "./video/video.mp4",
+        "./video/video.mp4",
+        "./video/video.mp4",
       ]
     }
   }
