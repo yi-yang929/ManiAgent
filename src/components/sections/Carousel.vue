@@ -18,15 +18,22 @@ export default {
         Pagination,
         Autoplay,
       ],
-      // 选择要轮播的照片
-      image_paths: [
-        "./carousel/1.jpg",
-        "./carousel/2.jpg",
-        "./carousel/3.jpg",
-        "./carousel/4.jpg",
-        "./carousel/5.jpg",
-        "./carousel/6.jpg",
-      ],
+      // // 选择要轮播的照片
+      // image_paths: [
+      //   "./carousel/1.jpg",
+      //   "./carousel/2.jpg",
+      //   "./carousel/3.jpg",
+      //   "./carousel/4.jpg",
+      //   "./carousel/5.jpg",
+      //   "./carousel/6.jpg",
+      // ],
+      video_paths: [
+        "../video/video.mp4",
+        "../video/video.mp4",
+        "../video/video.mp4",
+        "../video/video.mp4",
+        "../video/video.mp4",
+      ]
     }
   }
 }
@@ -62,8 +69,19 @@ export default {
           pauseOnMouseEnter:true,
         }"
         >
-        <swiper-slide v-for="path in image_paths">
+        <!-- <swiper-slide v-for="path in image_paths">
           <el-image :src="path"/>
+        </swiper-slide> -->
+        <swiper-slide v-for="path in video_paths">
+          <video 
+            controls 
+            muted 
+            preload 
+            playsinline
+            style="width: 100%; height: 100%; object-fit: cover;"
+          >
+            <source :src="path" type="video/mp4">
+          </video>
         </swiper-slide>
       </swiper>
     </el-col>
@@ -75,6 +93,15 @@ export default {
 /* 设置Swiper风格 */
 .swiper {
   --swiper-theme-color: white;
+}
+
+swiper-slide {
+  height: auto;
+}
+
+video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
 }
 
 </style>
