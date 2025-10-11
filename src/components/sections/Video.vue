@@ -16,7 +16,7 @@
         <!-- local -->
         <el-container class="video-container">
           <video controls muted preload playsinline>
-            <source src="/video/Maniagent_small_video.mp4" type="video/mp4">
+            <source src="/video/page_video_large.mp4" type="video/mp4">
           </video>
         </el-container>
         
