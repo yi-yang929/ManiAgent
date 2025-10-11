@@ -17,6 +17,7 @@ import Latex from './sections/Latex.vue'
 import Model3D from './sections/Model3D.vue'
 import GaussianSplats3D from './sections/GaussianSplats3D.vue'
 import Carousel_simulation from './sections/Carousel_simulation.vue'
+import Carousel_datacollect from './sections/Carousel_datacollect.vue'
 
 export default {
   components: {
@@ -37,7 +38,8 @@ export default {
     Latex,
     Model3D,
     GaussianSplats3D,
-    Carousel_simulation
+    Carousel_simulation,
+    Carousel_datacollect
   }
 }
 </script>
@@ -50,6 +52,7 @@ export default {
   <!-- <Markdown/> -->
   <Carousel_simulation/>
   <Carousel/>
+  <Carousel_datacollect/>
   <Latex/>
   <Table/>
   <Collapse/>
