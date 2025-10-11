@@ -55,14 +55,14 @@ export default {
   <Carousel_datacollect/>
   <!-- <Latex/> -->
   <Table/>
-  <Collapse/>
-  <Echart/>
-  <Model3D/>
-  <GaussianSplats3D/>
-  <SeletionForComparison/>
-  <ImageSliderInner/>
-  <ImageSlider/>
-  <ImageSelector/>
+  <!-- <Collapse/> -->
+  <!-- <Echart/> -->
+  <!-- <Model3D/> -->
+  <!-- <GaussianSplats3D/> -->
+  <!-- <SeletionForComparison/> -->
+  <!-- <ImageSliderInner/> -->
+  <!-- <ImageSlider/> -->
+  <!-- <ImageSelector/> -->
   <BibTeX/>
   <!-- <Comment/> -->
 </template>
