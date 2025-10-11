@@ -202,7 +202,6 @@ const mergedCellStyle = ({row, column, rowIndex, columnIndex}) => {
                                 :fit="false"
                                 :scrollbar-always-on="true"
                                 :show-header="true"
-                                border
                             >
                                 <el-table-column prop="Method" label="Method" width="180" sortable/>
                                 <el-table-column prop="Task_1" label="Task 1" min-width="100" sortable/>
@@ -226,10 +225,9 @@ const mergedCellStyle = ({row, column, rowIndex, columnIndex}) => {
                                 :fit="false"
                                 :scrollbar-always-on="true"
                                 :show-header="true"
-                                border
                             >
-                                <el-table-column prop="Type" label="Method" width="150"/>
-                                <el-table-column prop="Method" label="" width="150"/>
+                                <el-table-column prop="Type" label="Type" width="150"/>
+                                <el-table-column prop="Method" label="Method" width="150"/>
                                 <el-table-column prop="Task_1" label="Task 1" min-width="80" sortable/>
                                 <el-table-column prop="Task_2" label="Task 2" min-width="80" sortable/>
                                 <el-table-column prop="Task_3" label="Task 3" min-width="80" sortable/>
