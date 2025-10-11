@@ -80,7 +80,7 @@ const tableData = [
                     <el-tabs class="demo-tabs" model-value="Simulation">
 
                     <!-- 第一个tab -->
-                    <el-tab-pane label="Simulation" name="Simulation">
+                    <el-tab-pane label="Simulation" name="Simulation on SimplerEnv">
 
                         <!-- 表格数据 -->
                         <el-table 
