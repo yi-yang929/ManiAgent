@@ -16,6 +16,7 @@ import Comment from './sections/Comment.vue'
 import Latex from './sections/Latex.vue'
 import Model3D from './sections/Model3D.vue'
 import GaussianSplats3D from './sections/GaussianSplats3D.vue'
+import Carousel_simulation from './sections/Carousel_simulation.vue'
 
 export default {
   components: {
@@ -35,7 +36,8 @@ export default {
     Comment,
     Latex,
     Model3D,
-    GaussianSplats3D
+    GaussianSplats3D,
+    Carousel_simulation
   }
 }
 </script>
@@ -46,6 +48,7 @@ export default {
   <Video/>
   <Abstract/>
   <!-- <Markdown/> -->
+  <Carousel_simulation/>
   <Carousel/>
   <Latex/>
   <Table/>
