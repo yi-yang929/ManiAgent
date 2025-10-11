@@ -51,7 +51,7 @@ export default {
     </el-row>
 
     <el-row justify="center">
-      <el-col :span="24">
+      <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10" >
         <!-- 设置轮播图：循环播放、首张图序号、响应式、导航和分页、自动播放 -->
         <swiper
           :loop="true"
