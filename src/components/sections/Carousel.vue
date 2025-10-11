@@ -40,53 +40,59 @@ export default {
 </script>
 
 <template>
-  <el-row justify="center">
-    <el-col :span="24">
-      <!-- 设置轮播图：循环播放、首张图序号、响应式、导航和分页、自动播放 -->
-      <swiper
-        :loop="true"
-        :slidesPerView="1"
-        :breakpoints="{
-          600: {
-            slidesPerView: 2,
-          },
-          800: {
-            slidesPerView: 3,
-          },
-        }"
-        :modules="modules"
-        :navigation="{ 
-          hideOnClick:true,
-        }"
-        :pagination="{ 
-          hideOnClick:true,
-          clickable:true, 
-          type:'bullets' 
-        }"
-        :autoplay="{ 
-          delay:5000,
-          disableOnInteraction:false,
-          pauseOnMouseEnter:true,
-        }"
+  <div>
+    <el-divider />
+    
+    <el-row justify="center">
+      <h1 class="section-title">Physical Experiments</h1>
+    </el-row>
+
+    <el-row justify="center">
+      <el-col :span="24">
+        <!-- 设置轮播图：循环播放、首张图序号、响应式、导航和分页、自动播放 -->
+        <swiper
+          :loop="true"
+          :slidesPerView="1"
+          :breakpoints="{
+            600: {
+              slidesPerView: 2,
+            },
+            800: {
+              slidesPerView: 3,
+            },
+          }"
+          :modules="modules"
+          :navigation="{ 
+            hideOnClick:true,
+          }"
+          :pagination="{ 
+            hideOnClick:true,
+            clickable:true, 
+            type:'bullets' 
+          }"
+          :autoplay="{ 
+            delay:5000,
+            disableOnInteraction:false,
+            pauseOnMouseEnter:true,
+          }"
         >
-        <!-- <swiper-slide v-for="path in image_paths">
-          <el-image :src="path"/>
-        </swiper-slide> -->
-        <swiper-slide v-for="path in video_paths">
-          <video 
-            controls 
-            muted 
-            preload 
-            playsinline
-            style="width: 100%; height: 100%; object-fit: cover;"
-          >
-            <source :src="path" type="video/mp4">
-          </video>
-        </swiper-slide>
-      </swiper>
-    </el-col>
-  </el-row>
+          <swiper-slide v-for="path in video_paths">
+            <video 
+              controls 
+              muted 
+              preload 
+              playsinline
+              style="width: 100%; height: 100%; object-fit: cover;"
+            >
+              <source :src="path" type="video/mp4">
+            </video>
+          </swiper-slide>
+        </swiper>
+      </el-col>
+    </el-row>
+  </div>
 </template>
+
   
 <style>
 
