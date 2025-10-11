@@ -6,7 +6,7 @@
     <el-divider />
 
     <el-row justify="center">
-      <h1 class="section-title">Physical Experiments</h1>
+      <h1 class="section-title">Automatic Data Collection</h1>
     </el-row>
 
     <!-- 两个视频并排 -->
