@@ -164,27 +164,6 @@ const cellStyle = ({row, column, rowIndex, columnIndex}) => {
     }
 }
 
-// 合并单元格方法
-const arraySpanMethod = ({ row, column, rowIndex, columnIndex }) => {
-    if (columnIndex === 0) {
-        if (rowIndex === 0) {
-            return {
-                rowspan: 5,
-                colspan: 1
-            }
-        } else if (rowIndex === 5) {
-            return {
-                rowspan: 2,
-                colspan: 1
-            }
-        } else {
-            return {
-                rowspan: 0,
-                colspan: 0
-            }
-        }
-    }
-}
 </script>
 
 <template>
@@ -229,7 +208,6 @@ const arraySpanMethod = ({ row, column, rowIndex, columnIndex }) => {
                             :data="tableData2"
                             :default-sort="{ prop: 'Average', order: 'descending' }"
                             :cell-style="cellStyle"
-                            :span-method="arraySpanMethod"
                             scrollbar-always-on
                         >
                             <el-table-column prop="Type" label="Method" width="150"/>
