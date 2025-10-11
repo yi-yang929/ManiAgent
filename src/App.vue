@@ -151,4 +151,22 @@ th, td {
   overflow-y: hidden;
 }
 
+/* 表格全局样式 */
+.el-table__header-wrapper,
+.el-table__body-wrapper {
+    overflow-x: auto !important;
+}
+
+.el-table__header,
+.el-table__body {
+    width: 100% !important;
+    table-layout: fixed !important;
+}
+
+/* 确保表头和表体同步滚动 */
+.el-table__body-wrapper::-webkit-scrollbar,
+.el-table__header-wrapper::-webkit-scrollbar {
+    height: 8px !important;
+}
+
 </style>

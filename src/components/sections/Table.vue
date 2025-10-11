@@ -195,11 +195,14 @@ const mergedCellStyle = ({row, column, rowIndex, columnIndex}) => {
                             <el-table 
                                 :data="tableData"
                                 :default-sort="{ prop: 'Average', order: 'descending' }"
-                                scrollbar-always-on
                                 :header-cell-style="{ backgroundColor: '#f5f7fa' }"
                                 :row-style="{ height: '50px' }"
                                 :cell-style="{ padding: '5px' }"
                                 style="width: 100%; table-layout: fixed;"
+                                :fit="false"
+                                :scrollbar-always-on="true"
+                                :show-header="true"
+                                border
                             >
                                 <el-table-column prop="Method" label="Method" width="180" sortable/>
                                 <el-table-column prop="Task_1" label="Task 1" min-width="100" sortable/>
@@ -217,10 +220,13 @@ const mergedCellStyle = ({row, column, rowIndex, columnIndex}) => {
                                 :data="tableData2"
                                 :default-sort="{ prop: 'Average', order: 'descending' }"
                                 :cell-style="mergedCellStyle"
-                                scrollbar-always-on
                                 :header-cell-style="{ backgroundColor: '#f5f7fa' }"
                                 :row-style="{ height: '50px' }"
                                 style="width: 100%; table-layout: fixed;"
+                                :fit="false"
+                                :scrollbar-always-on="true"
+                                :show-header="true"
+                                border
                             >
                                 <el-table-column prop="Type" label="Method" width="150"/>
                                 <el-table-column prop="Method" label="" width="150"/>
@@ -247,26 +253,66 @@ const mergedCellStyle = ({row, column, rowIndex, columnIndex}) => {
     margin-top: 20px;
 }
 
-/* 确保表格容器样式正确 */
+/* 表格容器样式 */
 .el-table {
-  width: 100%;
+    width: 100% !important;
+    table-layout: fixed !important;
 }
 
-/* 修复表头和表体不对齐的问题 */
+/* 表头和表体容器样式 */
 .el-table__header-wrapper,
 .el-table__body-wrapper {
-  overflow-x: auto !important;
+    overflow-x: auto !important;
+    position: relative !important;
 }
 
 /* 确保表头和表体宽度一致 */
 .el-table__header,
 .el-table__body {
-  width: 100% !important;
-  table-layout: fixed;
+    width: 100% !important;
+    table-layout: fixed !important;
 }
 
-/* 修复滚动条导致的宽度差异 */
-.el-table__body-wrapper {
-  overflow-y: auto !important;
+/* 修复表头和表体不对齐的核心样式 */
+.el-table__body-wrapper::-webkit-scrollbar,
+.el-table__header-wrapper::-webkit-scrollbar {
+    height: 8px !important;
+}
+
+.el-table__body-wrapper::-webkit-scrollbar-thumb,
+.el-table__header-wrapper::-webkit-scrollbar-thumb {
+    background: #c0c4cc;
+    border-radius: 4px;
+}
+
+/* 表格单元格样式 */
+.el-table th,
+.el-table td {
+    padding: 8px 0 !important;
+    text-align: center !important;
+}
+
+/* 修复表格边框 */
+.el-table--border::after,
+.el-table--group::after,
+.el-table::before {
+    background-color: #EBEEF5;
+}
+
+/* 修复表格行样式 */
+.el-table__row {
+    height: 50px !important;
+}
+
+/* 修复表头样式 */
+.el-table__header {
+    width: 100% !important;
+    table-layout: fixed !important;
+}
+
+/* 修复表体样式 */
+.el-table__body {
+    width: 100% !important;
+    table-layout: fixed !important;
 }
 </style>
