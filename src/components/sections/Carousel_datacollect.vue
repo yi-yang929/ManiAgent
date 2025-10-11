@@ -10,9 +10,9 @@
     </el-row>
 
     <!-- 两个视频并排 -->
-    <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10" >
+    <el-row justify="center" :xs="24" :sm="20" :md="16" :lg="12" :xl="10">
       <!-- 第一个视频 -->
-      <el-col :xs="24" :sm="12">
+      <el-col :xs="24" :sm="10" :md="8" :lg="6" :xl="5">
         <el-container class="video-container">
           <h2 class="video-caption">Data collection process</h2>
           <video controls muted preload playsinline>
@@ -22,7 +22,7 @@
       </el-col>
       
       <!-- 第二个视频 -->
-      <el-col :xs="24" :sm="12">
+      <el-col :xs="24" :sm="10" :md="8" :lg="6" :xl="5">
         <el-container class="video-container">
           <h2 class="video-caption">Execution results of CogACT trained by auto collect data</h2>
           <video controls muted preload playsinline>
