@@ -175,7 +175,7 @@ const buttons = [
 
     <!-- 文章标题 -->
     <el-row justify="center">
-      <el-col :span="20">
+      <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="10" >
         <h1 class="paper-title">
           <span v-if="title" :style="{color:title_color}"> {{ title }}</span>
           <span v-if="title_supp" :style="{color:title_supp_color}"> {{ title_supp }}</span>
