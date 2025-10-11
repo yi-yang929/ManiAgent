@@ -137,16 +137,16 @@ const buttons = [
     link: "https://yi-yang929.github.io/ManiAgent/",
     component: MagicStick,
   },
-  {
-    disabled: true,
-    name: "Poster",
-    component: Picture,
-  },
-  {
-    disabled: true,
-    name: "Slide",
-    component: DataAnalysis,
-  },
+  // {
+  //   disabled: true,
+  //   name: "Poster",
+  //   component: Picture,
+  // },
+  // {
+  //   disabled: true,
+  //   name: "Slide",
+  //   component: DataAnalysis,
+  // },
   {
     disabled: false,
     name: "Video",
