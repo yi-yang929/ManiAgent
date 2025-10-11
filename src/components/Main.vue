@@ -45,7 +45,7 @@ export default {
   <!-- <Carousel/> -->
   <Video/>
   <Abstract/>
-  <Markdown/>
+  <!-- <Markdown/> -->
   <Latex/>
   <Table/>
   <Collapse/>
