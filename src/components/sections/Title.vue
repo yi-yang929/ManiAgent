@@ -118,6 +118,7 @@ const buttons = [
   {
     disabled: true,
     name: "Paper",
+    link: "https://yi-yang929.github.io/ManiAgent/",
     component: Document,
   },
   // {
