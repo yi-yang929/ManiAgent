@@ -193,7 +193,6 @@ const mergedCellStyle = ({row, column, rowIndex, columnIndex}) => {
                         <el-tab-pane label="Simulation" name="Simulation">
                             <!-- 表格数据 -->
                             <el-table 
-                                :justify="center"
                                 :data="tableData"
                                 :default-sort="{ prop: 'Average', order: 'descending' }"
                                 :header-cell-style="{ backgroundColor: '#f5f7fa' }"
@@ -217,7 +216,6 @@ const mergedCellStyle = ({row, column, rowIndex, columnIndex}) => {
                         <el-tab-pane label="Physical Experiments" name="Physical">
                             <!-- 表格数据 -->
                             <el-table 
-                                :justify="center"
                                 :data="tableData2"
                                 :default-sort="{ prop: 'Average', order: 'descending' }"
                                 :cell-style="mergedCellStyle"
@@ -271,6 +269,7 @@ const mergedCellStyle = ({row, column, rowIndex, columnIndex}) => {
 .el-table__body {
     width: 100% !important;
     table-layout: fixed !important;
+    margin: 0 auto !important;
 }
 
 /* 修复表头和表体不对齐的核心样式 */
@@ -313,6 +312,7 @@ const mergedCellStyle = ({row, column, rowIndex, columnIndex}) => {
 /* 修复表体样式 */
 .el-table__body {
     width: 100% !important;
+    justify-content: center !important;
     table-layout: fixed !important;
 }
 </style>
