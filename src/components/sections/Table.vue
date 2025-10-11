@@ -156,12 +156,20 @@ const tableData2 = [
 ]
 
 // 单元格样式方法
-const cellStyle = ({row, column, rowIndex, columnIndex}) => {
+// 合并单元格样式方法
+const mergedCellStyle = ({row, column, rowIndex, columnIndex}) => {
+    const baseStyle = {
+        padding: '5px'
+    };
+    
     if (rowIndex % 2 === 0) {
         return {
+            ...baseStyle,
             backgroundColor: '#EFEFEF'
         }
     }
+    
+    return baseStyle;
 }
 
 </script>
@@ -208,11 +216,10 @@ const cellStyle = ({row, column, rowIndex, columnIndex}) => {
                             <el-table 
                                 :data="tableData2"
                                 :default-sort="{ prop: 'Average', order: 'descending' }"
-                                :cell-style="cellStyle"
+                                :cell-style="mergedCellStyle"
                                 scrollbar-always-on
                                 :header-cell-style="{ backgroundColor: '#f5f7fa' }"
                                 :row-style="{ height: '50px' }"
-                                :cell-style="{ padding: '5px' }"
                                 style="width: 100%; table-layout: fixed;"
                             >
                                 <el-table-column prop="Type" label="Method" width="150"/>
