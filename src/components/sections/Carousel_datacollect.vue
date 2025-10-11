@@ -43,6 +43,13 @@
   flex-direction: column;
 }
 
+.video-wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 video {
   aspect-ratio: 16 / 9;
   width: 100%;
@@ -55,5 +62,9 @@ video {
   font-size: 1.2em;
   color: #333;
   font-weight: 600;
+  min-height: 2.4em; /* 确保标题区域高度一致，约两行文本的高度 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
