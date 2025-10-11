@@ -15,7 +15,7 @@
       <el-col :xs="24" :sm="12">
         <el-container class="video-container">
           <video controls muted preload playsinline>
-            <source src="./video/datacollection.mp4" type="video/mp4">
+            <source src="/video/datacollection.mp4" type="video/mp4">
           </video>
           <div class="video-caption">Data collection process.</div>
         </el-container>
@@ -25,7 +25,7 @@
       <el-col :xs="24" :sm="12">
         <el-container class="video-container">
           <video controls muted preload playsinline>
-            <source src="./video/cogact_carrot.mp4" type="video/mp4">
+            <source src="/video/cogact_carrot.mp4" type="video/mp4">
           </video>
           <div class="video-caption">Execution results of CogACT trained by auto collect data.</div>
         </el-container>
