@@ -56,7 +56,7 @@ video {
   color: #333;
   font-weight: 600;
   height: 3.6em; /* 使用固定高度替代min-height */
-  line-height: 1.2em; /* 设置行高以确保多行文本居中 */
+  line-height: 1.8em; /* 设置行高以确保多行文本居中 */
   display: flex;
   align-items: center;
   justify-content: center;
