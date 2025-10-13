@@ -30,13 +30,13 @@ const authors = [
     address_flag: "1,†"
   },
   {
-    name: "Yuqing Wen",
+    name: "Kefan Gu",
     icon: "",
     homepage: "",
     address_flag: "2,†"
   },
   {
-    name: "Kefan Gu",
+    name: "Yuqing Wen",
     icon: "",
     homepage: "",
     address_flag: "3,†"
@@ -77,13 +77,13 @@ const addresses = [
   },
   {
     address_flag: "2",
-    name: "University of Science and Technology of China",
+    name: "Nanjing University",
     icon: "",
     homepage: ""
   },
   {
     address_flag: "3",
-    name: "Nanjing University",
+    name: "University of Science and Technology of China",
     icon: "",
     homepage: ""
   },
