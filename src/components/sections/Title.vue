@@ -129,7 +129,7 @@ const buttons = [
   {
     disabled: false,
     name: "Code",
-    link: "https://yi-yang929.github.io/ManiAgent/",
+    link: "https://github.com/yi-yang929/mani-agent.git",
     component: Files,
   },
   {
