@@ -29,7 +29,21 @@ const links = {
       </el-row>
     </el-watermark>
   </div>
+  <div class="visit-count">
+    <span id="busuanzi_container_site_pv">
+      本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    </span>
+  </div>
 </template>
+
+<script setup>
+// 在组件挂载后加载不蒜子脚本
+onMounted(() => {
+  const script = document.createElement('script')
+  script.src = '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
+  document.body.appendChild(script)
+})
+</script>
 
 <style scoped>
 
@@ -43,6 +57,13 @@ const links = {
   text-align: center;
   margin: 20px;
   z-index: 1;
+}
+
+.visit-count {
+  text-align: center;
+  padding: 20px 0;
+  color: #666;
+  font-size: 14px;
 }
 
 </style>
