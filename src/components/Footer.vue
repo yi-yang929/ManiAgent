@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { onMounted } from 'vue'
 // 页脚需要的链接
 const links = {
     Nerfies: "https://github.com/nerfies/nerfies.github.io",
@@ -7,6 +8,12 @@ const links = {
     ElementPlus: "https://element-plus.org/zh-CN/",
     template: "https://github.com/JunyaoHu/academic-project-page-template-vue",
 }
+
+onMounted(() => {
+  const script = document.createElement('script')
+  script.src = '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
+  document.body.appendChild(script)
+})
 </script>
 
 <template>
@@ -36,14 +43,7 @@ const links = {
   </div>
 </template>
 
-<script setup>
-// 在组件挂载后加载不蒜子脚本
-onMounted(() => {
-  const script = document.createElement('script')
-  script.src = '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
-  document.body.appendChild(script)
-})
-</script>
+
 
 <style scoped>
 
