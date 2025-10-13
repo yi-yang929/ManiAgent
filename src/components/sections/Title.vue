@@ -51,7 +51,7 @@ const authors = [
     name: "Yucheng Zhao",
     icon: "",
     homepage: "",
-    address_flag: "4"
+    address_flag: "4,‡"
   },
   {
     name: "Tiancai Wang",
@@ -97,7 +97,7 @@ const addresses = [
 
 // 共一和通讯提示
 const con_and_corresponding_author = 
-  "*: Corresponding Author. †: This work was completed during the internship at Dexmal"
+  "*: Corresponding Author. †: This work was completed during the internship at Dexmal. ‡: Project lead."
 
 // 最新消息
 const news = ""
