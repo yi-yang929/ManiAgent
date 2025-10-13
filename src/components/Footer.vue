@@ -38,7 +38,7 @@ onMounted(() => {
   </div>
   <div class="visit-count">
     <span id="busuanzi_container_site_pv">
-      本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+      Total visits: <span id="busuanzi_value_site_pv"></span> 
     </span>
   </div>
 </template>
