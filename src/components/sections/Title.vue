@@ -132,12 +132,12 @@ const buttons = [
     link: "https://github.com/yi-yang929/mani-agent.git",
     component: Files,
   },
-  {
-    disabled: false,
-    name: "Demo",
-    link: "https://yi-yang929.github.io/ManiAgent/",
-    component: MagicStick,
-  },
+  // {
+  //   disabled: false,
+  //   name: "Demo",
+  //   link: "https://yi-yang929.github.io/ManiAgent/",
+  //   component: MagicStick,
+  // },
   // {
   //   disabled: true,
   //   name: "Poster",
