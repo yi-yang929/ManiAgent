@@ -128,7 +128,7 @@ const buttons = [
   // },
   {
     disabled: false,
-    name: "Code",
+    name: "Code(Soon)",
     link: "https://github.com/yi-yang929/mani-agent.git",
     component: Files,
   },
