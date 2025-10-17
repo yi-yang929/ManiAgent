@@ -18,6 +18,18 @@ import Model3D from './sections/Model3D.vue'
 import GaussianSplats3D from './sections/GaussianSplats3D.vue'
 import Carousel_simulation from './sections/Carousel_simulation.vue'
 import Carousel_datacollect from './sections/Carousel_datacollect.vue'
+// import { createApp } from 'vue'
+// import App from './App.vue'
+// import VueGtag from 'vue-gtag'
+// const app = createApp(App)
+
+// app.use(VueGtag, {
+//   config: {
+//     id: 'G-XXXXXXXXXX' // 替换为你的测量 ID
+//   }
+// })
+
+// app.mount('#app')
 
 export default {
   components: {

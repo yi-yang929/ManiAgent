@@ -1,5 +1,31 @@
 <script lang="ts" setup>
-import { onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
+
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+    dataLayer: any[]
+  }
+}
+
+const initGoogleAnalytics = () => {
+  // 创建并添加 Google Analytics 脚本
+  const script = document.createElement('script')
+  script.async = true
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-G5XG7F9BTR'
+  document.head.appendChild(script)
+
+  // 初始化 dataLayer
+  window.dataLayer = window.dataLayer || [];
+  
+  // 定义 gtag 函数
+  window.gtag = function(){window.dataLayer.push(arguments);}
+  
+  // 配置 GA
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-G5XG7F9BTR');
+}
+
 // 页脚需要的链接
 const links = {
     Nerfies: "https://github.com/nerfies/nerfies.github.io",
@@ -9,11 +35,23 @@ const links = {
     template: "https://github.com/JunyaoHu/academic-project-page-template-vue",
 }
 
+// onMounted(() => {
+//   const script = document.createElement('script')
+//   script.src = '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
+//   document.body.appendChild(script)
+// })
+
 onMounted(() => {
-  const script = document.createElement('script')
-  script.src = '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
-  document.body.appendChild(script)
+  try {
+    initGoogleAnalytics();
+    const script = document.createElement('script')
+    script.src = '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
+    document.body.appendChild(script)
+  } catch (error) {
+    console.error('Failed to initialize Google Analytics:', error)
+  }
 })
+
 </script>
 
 <template>
