@@ -4,10 +4,10 @@ export default {
     return {
       bibtex: [
         "@article{yang2025maniagent,",
-        "author = {Yang, Yi and Gu, Kefan and Wen, Yuqing and Li, Hebei and Zhao, Yucheng and Wang, Tiancai and Liu, Xudong},",
-        "journal = {arXiv},",
-        "year = {2025},",
-        "title = {ManiAgent: An {Agentic} {Framework} for {General} {Robotic} {Manipulation}},",
+        "title={ManiAgent: An Agentic Framework for General Robotic Manipulation},",
+        "author={Yang, Yi and Gu, Kefan and Wen, Yuqing and Li, Hebei and Zhao, Yucheng and Wang, Tiancai and Liu, Xudong},",
+        "journal={arXiv preprint arXiv:2510.11660},",
+        "year={2025}",
         "}",
       ],
     }
