@@ -128,8 +128,8 @@ const buttons = [
   // },
   {
     disabled: false,
-    name: "Code(Soon)",
-    link: "https://github.com/yi-yang929/mani-agent.git",
+    name: "Code",
+    link: "https://github.com/yi-yang929/mani-agent",
     component: Files,
   },
   // {
