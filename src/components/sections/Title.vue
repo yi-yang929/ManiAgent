@@ -91,7 +91,7 @@ const addresses = [
     address_flag: "4",
     name: "Dexmal",
     icon: "",
-    homepage: "https://dexmal.hjwtest.com/"
+    homepage: "https://dexmal.com/"
   },
 ]
 
